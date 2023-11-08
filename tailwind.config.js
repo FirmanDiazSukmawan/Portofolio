@@ -12,7 +12,8 @@ module.exports = {
       fontFamily: {
         sans: ["Roboto", "Helvetica", "Arial", "sans-serif"],
         sora: ["Sora"],
-        inter: ["Inter"],
+        inter: ["Inter Regular"],
+        interBold: ["Inter Bold"],
       },
     },
   },

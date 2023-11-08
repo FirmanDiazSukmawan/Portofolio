@@ -7,7 +7,7 @@ function Header() {
   return (
     <header className="w-[100%] lg:pr-[250px] md:pr-[200px] pr-[0px]">
         <div className="textHeader font-sora lg:text-[56px] md:text-[40px] text-[22px] lg:text-start md:text-start text-center">
-          Hi Im Naufaldi, a special human with some ability to love learning and
+          Hi Im Firman, a special human with some ability to love learning and
           working on teamwork.
         </div>
 
