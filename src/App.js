@@ -3,7 +3,7 @@ import NavbarMenu from "./component/navbar/navbar";
 import Header from "./component/Section/header";
 import CarouselSection from "./component/Section/carousel";
 import ProjectContent from "./component/Section/project";
-import CodeSnippet from "./component/Section/codeSnippet";
+import Skills from "./component/Section/skills";
 
 export default function App() {
   return (
@@ -15,7 +15,7 @@ export default function App() {
             <Header />
             <CarouselSection />
             <ProjectContent />
-            <CodeSnippet />
+            <Skills />
           </div>
         </div>
       </div>

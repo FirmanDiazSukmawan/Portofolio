@@ -17,6 +17,16 @@ function ProjectContent() {
     Object?.keys(pageData)?.length / projectsPerPage
   );
 
+  const [showFullscreen,setShowFullscreen] = useState(false)
+
+  const handleImageClick = () => {
+    setShowFullscreen(true);
+  }
+
+  const handleImageCloseFullScreen = () => {
+    setShowFullscreen(false);
+  }
+
   // console.log(totalPages);
 
   const handlePageChange = (newPage) => {
@@ -28,7 +38,7 @@ function ProjectContent() {
   const project = Object?.values(pageData)?.slice(startIndex, endIndex);
 
   return (
-    <div className=" lg:mr-[91px]">
+    <div className=" lg:mr-[91px]" id="portofolio">
       <div className="flex flex-col space-y-9 md:w-full lg:items-start md:items-start items-center">
         <div className="font-sora lg:text-[48px] md:text-[35px] text-[24px] text-white">
           My Project
@@ -69,7 +79,16 @@ function ProjectContent() {
                 src={item.image}
                 alt="porto"
                 className="w-[80%] h-[70%] object-fill"
+                onClick={handleImageClick}
               />
+              {showFullscreen && (
+                <img
+                src={item.image}
+                alt="porto"
+                className="w-[100%] h-[100%] object-cover absolute"
+                onClick={handleImageCloseFullScreen}
+              />
+              )}
             </div>
             <div className="flex-col flex justify-center ml-7 lg:space-y-6 md:space-y-6 space-y-3 lg:items-start md:items-start items-center">
               <div className="textInterBold text-[#DEDEDE] text-lg">

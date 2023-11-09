@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import facebook from "../../assets/facebook.svg";
 import instagram from "../../assets/Frame.svg";
 import twitter from "../../assets/Frame (1).svg";
@@ -9,19 +9,47 @@ import { Popover, PopoverContent, PopoverTrigger } from "@nextui-org/react";
 
 
 function Header() {
+
+  const [showFullscreen,setShowFullscreen] = useState(false)
+
+  const handleImageClick = () => {
+    setShowFullscreen(true);
+  }
+
+  const handleImageCloseFullScreen = () => {
+    setShowFullscreen(false);
+  }
+
   return (
-    <header className="w-[100%] lg:pr-[250px] md:pr-[200px] pr-[0px]">
+    <header className="w-[100%] lg:pr-[250px] md:pr-[200px] pr-[0px]" id="aboutMe">
         <div className="textHeader font-sora lg:text-[56px] md:text-[40px] text-[22px] lg:text-start md:text-start text-center">
         Hi Im Firman, a human with some ability to love learning and working on teamwork.
         </div>
 
+       
         <div className="flex lg:flex-row md:flex-col flex-col items-center lg:space-y-0 md:space-y-5 space-y-3 lg:pt-0 md:pt-3">
-          <div className="lg:w-[124px] lg:h-[124px] sm:w-[120px] sm:h-[120px] bg-[#3A3636] rounded-[50%] border-2 bg-gradient-to-r from-[#62D9FF] to-[#3BF686] flex items-center justify-center">
+          <div className="flex flex-col lg:items-start md:items-center items-center">
+            
+          <div className="lg:w-[124px] lg:h-[124px] sm:w-[120px] sm:h-[120px]
+          w-[124px] h-[124px] bg-[#3A3636] rounded-[50%] border-2 bg-gradient-to-r from-[#62D9FF] to-[#3BF686] flex items-center justify-center">
             <img
               src={myFoto}
               alt="img"
               className="w-[120px]  h-[120px] rounded-[50%]  bg-[#3A3636] object-cover"
+              onClick={handleImageClick}
             />
+          </div>
+          {showFullscreen&& (
+            <div className="w-full">
+              <img
+                className="w-full h-full"
+                src={myFoto}
+                alt="Full Screen"
+                onClick={handleImageCloseFullScreen}
+              />
+            </div>
+          
+          )}
           </div>
 
           <div className="flex flex-col lg:w-[499px] lg:ml-[36px] md:ml-[20px] ml-[5px] lg:space-y-0 md:space-y-0 space-y-2">
