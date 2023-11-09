@@ -19,7 +19,7 @@ const pageData = {
     subtittle: "Recipe Cooking",
     tittleImage: "Search Screen",
     description:
-      "Recipe Cooking: Explore and share a variety of daily recipes. Search by name, like and save favorites. Leave feedback, receive notifications for updates, and capture your own culinary creations with the in-app camera. Enjoy the world of cooking! ",
+      "Explore and share a variety of daily recipes. Search by name, like and save favorites. Leave feedback, receive notifications for updates, and capture your own culinary creations with the in-app camera. Enjoy the world of cooking! ",
     image: MobilePicture,
     github: "https://github.com/xTats/FE-Recipe-RN",
     link: "https://drive.google.com/file/d/10Du1B1AyJg-WY7X6DcBdc40IhXtWtS03/view",
