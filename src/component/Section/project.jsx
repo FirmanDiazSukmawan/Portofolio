@@ -85,7 +85,7 @@ function ProjectContent() {
                 <img
                 src={item.image}
                 alt="porto"
-                className="w-[100%] h-[100%] object-cover absolute"
+                className="w-[100%] h-[100%] object-fill absolute"
                 onClick={handleImageCloseFullScreen}
               />
               )}
