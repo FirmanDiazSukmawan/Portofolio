@@ -1,22 +1,26 @@
 import React from "react";
-import img from "../../assets/image1.png";
 import facebook from "../../assets/facebook.svg";
 import instagram from "../../assets/Frame.svg";
 import twitter from "../../assets/Frame (1).svg";
+import myFoto from "../../assets/myFoto.jpg"
+import cv from "../../assets/iconCv.png"
+import email from "../../assets/email.svg"
+import { Popover, PopoverContent, PopoverTrigger } from "@nextui-org/react";
+
+
 function Header() {
   return (
     <header className="w-[100%] lg:pr-[250px] md:pr-[200px] pr-[0px]">
         <div className="textHeader font-sora lg:text-[56px] md:text-[40px] text-[22px] lg:text-start md:text-start text-center">
-          Hi Im Firman, a special human with some ability to love learning and
-          working on teamwork.
+        Hi Im Firman, a human with some ability to love learning and working on teamwork.
         </div>
 
-        <div className="flex lg:flex-row md:flex-row flex-col items-center lg:space-y-0 md:space-y-0 space-y-3">
+        <div className="flex lg:flex-row md:flex-col flex-col items-center lg:space-y-0 md:space-y-5 space-y-3 lg:pt-0 md:pt-3">
           <div className="lg:w-[124px] lg:h-[124px] sm:w-[120px] sm:h-[120px] bg-[#3A3636] rounded-[50%] border-2 bg-gradient-to-r from-[#62D9FF] to-[#3BF686] flex items-center justify-center">
             <img
-              src={img}
+              src={myFoto}
               alt="img"
-              className="lg:w-[120px]  rounded-full  bg-[#3A3636]"
+              className="w-[120px]  h-[120px] rounded-[50%]  bg-[#3A3636] object-cover"
             />
           </div>
 
@@ -25,18 +29,60 @@ function Header() {
               Biography
             </div>
             <div className="font-inter text-[#D6D6D6] lg:text-[18px] lg:text-start md:text-start text-center">
-              Getting Buff +1 for learning, Buff +2 for documentation and more
-              buff on managing team. Exicited on React, UX Research and Agile.
+            Firman is a high school graduate with some computer skills and a passion for the world of programming, with a focus on Fullstack Web & Mobile Development. I am a responsible individual when it comes to completing tasks. Exicited on <span className="text-[#87cefa]">React</span>, <span className="text-[#4CA9FF]">React Native</span>, <span className="text-[#80FFA3]">NodeJs</span> and <span className="text-[#3BF686]">Agile</span>.
             </div>
           </div>
-          <div className="flex flex-col lg:ml-[86px] lg:h-[168px]">
+          <div className="flex flex-col lg:ml-[86px] lg:h-[168px] items-center">
             <div className="text-[#FBFBFB] lg-text-[28px] md:text-[25px] text-[20px] font-sora lg:w-[197px] lg:h-[72px] flex items-center">
               Lets Connect
             </div>
             <div className="flex flex-row space-x-4">
-              <img src={twitter} alt="twitter" />
-              <img src={instagram} alt="instagram" />
-              <img src={facebook} alt="facebook"></img>
+            <Popover showArrow placement="bottom">
+      <PopoverTrigger>
+      <img src={twitter} alt="twitter" />
+      </PopoverTrigger>
+      <PopoverContent className="p-1">
+        <a href="https://twitter.com/DiazSukmawan" className="underline">twitter.com/DiazSukmawan </a>
+      </PopoverContent>
+    </Popover>
+    <Popover showArrow placement="bottom">
+      <PopoverTrigger>
+      <img src={instagram} alt="instagram" />
+      </PopoverTrigger>
+      <PopoverContent className="p-1">
+        <a href="https://www.instagram.com/firman670676/" className="underline">instagram.com/firman670676 </a>
+      </PopoverContent>
+    </Popover>
+    <Popover showArrow placement="bottom">
+      <PopoverTrigger>
+      <img src={facebook} alt="facebook"/>
+      </PopoverTrigger>
+      <PopoverContent className="p-1">
+        <a href="https://www.facebook.com/03MY.Ella.4674/" className="underline">facebook.com/FirmanDiazSukmawan </a>
+      </PopoverContent>
+    </Popover>
+    <Popover showArrow placement="bottom">
+      <PopoverTrigger>
+      <img src={email} alt="email" />
+      </PopoverTrigger>
+      <PopoverContent className="p-1">
+        <a href="mailto:firman670676@gmail.com" className="underline">firman670676@gmail.com </a>
+      </PopoverContent>
+    </Popover>
+    <Popover showArrow placement="bottom">
+      <PopoverTrigger>
+      <img src={cv} alt="cv" className="w-[30px] h-[30px] object-fill"/>
+      </PopoverTrigger>
+      <PopoverContent className="p-1 flex flex-col items-start justify-start">
+        <a href="https://docs.google.com/document/d/1ABrVxIc-Q4QCOAHUklFCPYUUwKnvlqOth8IEDb4psHo/edit?usp=sharing" className="underline">CV-Indonesia </a>
+        <a href="https://docs.google.com/document/d/1RvXGLfdHMlCkmfZyMT4B2OB-2416EUP4dK_d_6ynDDY/edit?usp=sharing" className="underline pt-2">CV-ENG </a>
+      </PopoverContent>
+    </Popover>
+
+              
+              
+              
+             
             </div>
           </div>
         </div>

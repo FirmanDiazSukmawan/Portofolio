@@ -6,10 +6,13 @@ import {
     NavbarItem,
     Link,
     Button,
-    Dropdown,
-    Avatar,
+    Popover,
+    PopoverTrigger,
+    User,
+    PopoverContent,
   } from "@nextui-org/react";
- 
+import myFoto from "../../assets/myFoto.jpg"
+import { UserCard } from '../cardPopup/cardPopup';
 
 function NavbarMenu() {
     
@@ -44,7 +47,22 @@ function NavbarMenu() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="flex">
-        <Avatar isBordered color="primary" src="https://i.pravatar.cc/150?u=a04258a2462d826712d" />
+        <Popover showArrow placement="bottom">
+      <PopoverTrigger>
+        <User   
+          as="button"
+          name="Firman"
+          description="Fullstack Developer"
+          className="transition-transform"
+          avatarProps={{
+            src: myFoto
+          }}
+        />
+      </PopoverTrigger>
+      <PopoverContent className="p-1">
+        <UserCard image={myFoto} />
+      </PopoverContent>
+    </Popover>
         </NavbarItem>
        
       </NavbarContent>
