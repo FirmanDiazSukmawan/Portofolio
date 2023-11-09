@@ -18,7 +18,7 @@ function CarouselSection() {
           What I do
         </div>
         <div className="font-inter text-[#EDCECE] lg:text-[18px] lg:text-start md:text-start text-center lg:w-[458px]">
-        Building and maintaining websites, <span className="text-[#3BF686]">fullstack dev</span> also possess a high level of curiosity,My motto is always learning new things there's never a word <span className="text-[#62D9FF]"> too late</span>.
+        Building and maintaining websites, <span className="text-[#3BF686]">fullstack dev</span> also possess a high level of curiosity, My motto is always learning new things there's never a word <span className="text-[#62D9FF]"> too late</span>.
         </div>
       </div>
       <Carousel autoPlay interval={3000} showStatus={false} showThumbs={false} width={smallScreen? 245: mediumScreen? 500 : largeScreen? 600 : 700} dynamicHeight={false}>
