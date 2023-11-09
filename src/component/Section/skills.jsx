@@ -4,7 +4,7 @@ import skillImage from "../dummyData/skillsData";
 function Skills() {
   // console.log(skillImage)
   return (
-    <div className="lg:mr-149 md:mr-130 mr-0 flex flex-col space-y-8" id="skills">
+    <div className="lg:mr-[149px] md:mr-[130px] mr-0 flex flex-col space-y-8" id="skills">
       <div className="text-white font-sora text-5xl ">MySkills</div>
       <div className="flex flex-row flex-wrap justify-center">
         {Object?.keys(skillImage)?.map((index)=>(
