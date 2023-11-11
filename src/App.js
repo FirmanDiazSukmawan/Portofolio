@@ -55,15 +55,20 @@ export default function App() {
           transition: { duration: 1 },
         });
       }
-    }, 200); // Adjust the throttle time as needed (e.g., 200 milliseconds)
+    }, 200); 
 
     window.addEventListener("scroll", throttledHandleScroll);
 
     return () => {
       window.removeEventListener("scroll", throttledHandleScroll);
-      throttledHandleScroll.cancel(); // Ensure cleanup of the throttle
+      throttledHandleScroll.cancel(); 
     };
   }, [projectContentAnimation]);
+
+  useEffect(() => {
+   
+    window.scrollTo(0, 0);
+  }, [loading]);
 
   return (
     <>
