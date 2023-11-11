@@ -7,7 +7,7 @@ import Skills from "./component/Section/skills";
 import { Player } from "@lottiefiles/react-lottie-player";
 import loadingCat from "./assets/loading/loading.json";
 import { useAnimation, motion } from "framer-motion";
-import { throttle } from "lodash";
+import { debounce, throttle } from "lodash";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -23,13 +23,24 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    if (!loading) {
-      headerAnimation.start({
-        opacity: 1,
-        x: 0,
-        transition: { duration: 1 },
-      });
-    }
+    const delayedStartAnimation = debounce(() => {
+      if (!loading) {
+        headerAnimation.start({
+          opacity: 1,
+          x: 0,
+          transition: { duration: 1 },
+        });
+      }
+    }, 200);
+
+    delayedStartAnimation();
+
+    window.addEventListener("scroll", delayedStartAnimation);
+
+    return () => {
+      window.removeEventListener("scroll", delayedStartAnimation);
+      delayedStartAnimation.cancel();
+    };
   }, [loading, headerAnimation]);
 
   useEffect(() => {
