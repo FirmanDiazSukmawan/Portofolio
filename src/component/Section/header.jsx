@@ -7,11 +7,52 @@ import cv from "../../assets/cv.png"
 import email from "../../assets/email.png"
 import linkedin from "../../assets/linkedin.png"
 import { Popover, PopoverContent, PopoverTrigger } from "@nextui-org/react";
+import { useEffect } from "react";
+import { useRef } from "react";
 
 
 function Header() {
 
   const [showFullscreen,setShowFullscreen] = useState(false)
+  const [typedText, setTypedText] = useState("");
+  const intervalRef = useRef(null);
+
+
+
+  const text = "a human with some ability to love learning and working on teamwork.";
+
+
+
+  useEffect(() => {
+    function typeText() {
+      let index = 0;
+  
+      intervalRef.current = setInterval(() => {
+        // Normalize the character before adding it to the text
+        const normalizedChar = text[index].normalize('NFC');
+        
+        setTypedText((prevText) => prevText + normalizedChar);
+        index++;
+  
+        if (index === text.length) {
+          clearInterval(intervalRef.current);
+  
+         
+          setTimeout(() => {
+            setTypedText("");
+            typeText(); 
+          }, 2000);
+        }
+      }, 100);
+    }
+  
+    typeText(); // Start typing when the component mounts
+  
+    return () => {
+      // Clear the interval when the component unmounts
+      clearInterval(intervalRef.current);
+    };
+  }, [text]);
 
   const handleImageClick = () => {
     setShowFullscreen(true);
@@ -24,7 +65,7 @@ function Header() {
   return (
     <header className="w-[100%] lg:pr-[250px] md:pr-[200px] pr-[0px]" id="aboutMe">
         <div className="textHeader font-sora lg:text-[56px] md:text-[40px] text-[22px] lg:text-start md:text-start text-center">
-        Hi Im Firman, a human with some ability to love learning and working on teamwork.
+        Hi Im Firman, {typedText}
         </div>
 
        
