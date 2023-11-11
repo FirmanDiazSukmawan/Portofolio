@@ -23,7 +23,7 @@ function CarouselSection() {
       </div>
       <Carousel autoPlay interval={3000} showStatus={false} showThumbs={false} width={smallScreen? 245: mediumScreen? 500 : largeScreen? 600 : 700} dynamicHeight={false}>
         <div className="flex lg:flex-row md:flex-row flex-row lg:space-x-7 md:space-x-5 space-x-3 items-center justify-center">
-          <div className="bg-[#323443] lg:w-[262px] md:w-[250px] w-[150px] lg:h-[190px] md:h-[250px] h-[340px] flex relative flex-col justify-center items-center lg:px-[19px] md:px-[15px] px-[5px] rounded-xl space-y-1">
+          <div className="bg-[#323443] lg:w-[262px] md:w-[250px] w-[130px] lg:h-[190px] md:h-[250px] h-[350px] flex relative flex-col justify-center items-center lg:px-[19px] md:px-[15px] px-[5px] rounded-xl space-y-1">
             <div className="w-[72px] h-[72px] bg-[#323443] rounded-full flex items-center justify-center border-2 border-[#4CA9FF, #3BF686] text-center">
               <img src={globe} alt="globe" />
             </div>
@@ -32,7 +32,7 @@ function CarouselSection() {
             Creating and designing a website according to your needs and ensuring its compatibility across various devices.
             </div>
           </div>
-          <div className="bg-[#323443] lg:w-[262px] md:w-[250px] w-[150px] lg:h-[190px] md:h-[250px] h-[340px] flex relative flex-col justify-center items-center lg:px-[19px] md:px-[15px] px-[5px] rounded-xl space-y-1">
+          <div className="bg-[#323443] lg:w-[262px] md:w-[250px] w-[130px] lg:h-[190px] md:h-[250px] h-[350px] flex relative flex-col justify-center items-center lg:px-[19px] md:px-[15px] px-[5px] rounded-xl space-y-1">
             <div className="w-[72px] h-[72px] bg-[#323443] rounded-full flex items-center justify-center border-2 border-[#4CA9FF, #3BF686] text-center">
               <img src={frontEnd} alt="frontend" className="brightness-200" />
             </div>
@@ -44,7 +44,7 @@ function CarouselSection() {
         </div>
 
         <div className="flex lg:flex-row md:flex-row flex-row lg:space-x-7 md:space-x-5 space-x-3 items-center justify-center">
-          <div className="bg-[#323443] lg:w-[262px] md:w-[250px] w-[150px] lg:h-[190px] md:h-[250px] h-[340px] flex relative flex-col justify-center items-center lg:px-[19px] md:px-[15px] px-[5px] rounded-xl space-y-1">
+          <div className="bg-[#323443] lg:w-[262px] md:w-[250px] w-[130px] lg:h-[190px] md:h-[250px] h-[350px] flex relative flex-col justify-center items-center lg:px-[19px] md:px-[15px] px-[5px] rounded-xl space-y-1">
             <div className="w-[72px] h-[72px] bg-[#323443] rounded-full flex items-center justify-center border-2 border-[#4CA9FF, #3BF686] text-center">
               <img src={backEnd} alt="backend" className="brightness-200" />
             </div>
@@ -53,7 +53,7 @@ function CarouselSection() {
             Designing & optimiz the web or app database and server-side for seamless functionality across devices.
             </div>
           </div>
-          <div className="bg-[#323443] lg:w-[262px] md:w-[250px] w-[150px] lg:h-[190px] md:h-[250px] h-[340px] flex relative flex-col justify-center items-center lg:px-[19px] md:px-[15px] px-[5px] rounded-xl space-y-1">
+          <div className="bg-[#323443] lg:w-[262px] md:w-[250px] w-[130px] lg:h-[190px] md:h-[250px] h-[350px] flex relative flex-col justify-center items-center lg:px-[19px] md:px-[15px] px-[5px] rounded-xl space-y-1">
             <div className="w-[72px] h-[72px] bg-[#323443] rounded-full flex items-center justify-center border-2 border-[#4CA9FF, #3BF686] text-center">
               <img src={fullstack} alt="fullstack" />
             </div>
@@ -65,7 +65,7 @@ function CarouselSection() {
         </div>
 
         <div className="flex lg:flex-row md:flex-row flex-row lg:space-x-7 md:space-x-5 space-x-3 items-center justify-center">
-          <div className="bg-[#323443] lg:w-[262px] md:w-[250px] w-[150px] lg:h-[190px] md:h-[250px] h-[340px] flex relative flex-col justify-center items-center lg:px-[19px] md:px-[15px] px-[5px] rounded-xl space-y-1">
+          <div className="bg-[#323443] lg:w-[262px] md:w-[250px] w-[130px] lg:h-[190px] md:h-[250px] h-[350px] flex relative flex-col justify-center items-center lg:px-[19px] md:px-[15px] px-[5px] rounded-xl space-y-1">
             <div className="w-[72px] h-[72px] bg-[#323443] rounded-full flex items-center justify-center border-2 border-[#4CA9FF, #3BF686] text-center">
               <img src={mobileDev} alt="mobileDev" className="brightness-200" />
             </div>
