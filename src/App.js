@@ -73,7 +73,7 @@ export default function App() {
             autoplay
             loop
             src={loadingCat}
-            className="lg:w-[300px] md:w-[250px] w-[150px] lg:h-[300px] md:h-[250px] h-[150px]"
+            className="lg:w-[300px] md:w-[250px] w-[150px] lg:h-[280px] md:h-[250px] h-[110px]"
           ></Player>
         </div>
       ) : (
