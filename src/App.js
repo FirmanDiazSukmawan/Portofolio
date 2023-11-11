@@ -6,9 +6,12 @@ import ProjectContent from "./component/Section/project";
 import Skills from "./component/Section/skills";
 import { Player } from "@lottiefiles/react-lottie-player";
 import loadingCat from "./assets/loading/loading.json";
+import { useAnimation, motion } from "framer-motion";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
+  const headerAnimation = useAnimation();
+  const projectContentAnimation = useAnimation();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -17,6 +20,34 @@ export default function App() {
 
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    if (!loading) {
+      headerAnimation.start({
+        opacity: 1,
+        x: 0,
+        transition: { duration: 1 },
+      });
+    }
+  }, [loading, headerAnimation]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      if (scrollPosition > windowHeight * 0.5) {
+        projectContentAnimation.start({
+          opacity: 1,
+          x: 0,
+          transition: { duration: 1 },
+        });
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [projectContentAnimation]);
 
   return (
     <>
@@ -34,9 +65,24 @@ export default function App() {
           <NavbarMenu />
           <div className="w-[100%] lg:mt-[94px] md:mt-[60px] mt-[30px] flex flex-1 flex-col">
             <div className="lg:pl-[150px] md:pl-[100px] pl-[5px]  lg:space-y-[63px] flex flex-col space-y-10">
-              <Header />
-              <CarouselSection />
-              <ProjectContent />
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                animate={headerAnimation}
+              >
+                <Header />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                animate={headerAnimation}
+              >
+                <CarouselSection />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                animate={projectContentAnimation}
+              >
+                <ProjectContent />
+              </motion.div>
               <Skills />
             </div>
           </div>
