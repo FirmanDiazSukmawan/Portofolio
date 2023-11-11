@@ -71,7 +71,7 @@ function Header() {
       <img src={twitter} alt="twitter" className="w-[30px] h-[30px] object-cover" />
       </PopoverTrigger>
       <PopoverContent className="p-1">
-        <a href="https://twitter.com/DiazSukmawan" className="underline">twitter.com/DiazSukmawan </a>
+        <a href="https://twitter.com/DiazSukmawan" className="underline">DiazSukmawan </a>
       </PopoverContent>
     </Popover>
     <Popover showArrow placement="bottom">
@@ -79,7 +79,7 @@ function Header() {
       <img src={instagram} alt="instagram" className="w-[30px] h-[30px] object-cover" />
       </PopoverTrigger>
       <PopoverContent className="p-1">
-        <a href="https://www.instagram.com/firman670676/" className="underline">instagram.com/firman670676 </a>
+        <a href="https://www.instagram.com/firman670676/" className="underline">@firman670676 </a>
       </PopoverContent>
     </Popover>
     <Popover showArrow placement="bottom">
@@ -87,7 +87,7 @@ function Header() {
       <img src={facebook} alt="facebook" className="w-[30px] h-[30px] object-cover"/>
       </PopoverTrigger>
       <PopoverContent className="p-1">
-        <a href="https://www.facebook.com/03MY.Ella.4674/" className="underline">facebook.com/FirmanDiazSukmawan </a>
+        <a href="https://www.facebook.com/03MY.Ella.4674/" className="underline">FirmanDiazSukmawan </a>
       </PopoverContent>
     </Popover>
     <Popover showArrow placement="bottom">
@@ -112,7 +112,7 @@ function Header() {
       <img src={linkedin} alt="linkedin" className="w-[30px] h-[30px] object-cover"/>
       </PopoverTrigger>
       <PopoverContent className="p-1 flex flex-col items-start justify-start">
-        <a href="https://www.linkedin.com/in/firman-diaz/" className="underline">linkedin.com/in/firman-diaz</a>
+        <a href="https://www.linkedin.com/in/firman-diaz/" className="underline">Firman D.S</a>
       </PopoverContent>
     </Popover>
 
