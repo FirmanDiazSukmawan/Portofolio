@@ -36,11 +36,11 @@ export default function App() {
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
 
-      if (scrollPosition > windowHeight * 0.3) {
+      if (scrollPosition > windowHeight * 0.1) {
         projectContentAnimation.start({
           opacity: 1,
           x: 0,
-          transition: { duration: 0.5 },
+          transition: { duration: 1 },
         });
       }
     };
