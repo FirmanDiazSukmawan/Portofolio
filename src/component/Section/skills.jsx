@@ -1,17 +1,18 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import skillImage from "../dummyData/skillsData";
+import { throttle } from "lodash";
 
 function Skills() {
   const skillsAnimation = useAnimation();
   const skillsRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScrollThrottled = throttle(() => {
       const scrollPosition = window.scrollY;
       const elementPosition = skillsRef.current.offsetTop;
       const windowHeight = window.innerHeight;
-
+  
       if (scrollPosition > elementPosition - windowHeight * 0.9) {
         skillsAnimation.start((i) => ({
           opacity: 1,
@@ -19,10 +20,10 @@ function Skills() {
           transition: { delay: i * 0.2, duration: 0.5 },
         }));
       }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    }, 200);
+  
+    window.addEventListener("scroll", handleScrollThrottled);
+    return () => window.removeEventListener("scroll", handleScrollThrottled);
   }, [skillsAnimation]);
 
   return (

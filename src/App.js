@@ -7,6 +7,7 @@ import Skills from "./component/Section/skills";
 import { Player } from "@lottiefiles/react-lottie-player";
 import loadingCat from "./assets/loading/loading.json";
 import { useAnimation, motion } from "framer-motion";
+import { throttle } from "lodash";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -32,7 +33,7 @@ export default function App() {
   }, [loading, headerAnimation]);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const throttledHandleScroll = throttle(() => {
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
 
@@ -43,10 +44,14 @@ export default function App() {
           transition: { duration: 1 },
         });
       }
-    };
+    }, 200); // Adjust the throttle time as needed (e.g., 200 milliseconds)
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", throttledHandleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", throttledHandleScroll);
+      throttledHandleScroll.cancel(); // Ensure cleanup of the throttle
+    };
   }, [projectContentAnimation]);
 
   return (
