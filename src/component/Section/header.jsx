@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import facebook from "../../assets/facebook.svg";
-import instagram from "../../assets/Frame.svg";
-import twitter from "../../assets/Frame (1).svg";
+import facebook from "../../assets/facebook.png";
+import instagram from "../../assets/instagram.png";
+import twitter from "../../assets/twitter.png";
 import myFoto from "../../assets/myFoto.jpg"
-import cv from "../../assets/iconCv.png"
-import email from "../../assets/email.svg"
+import cv from "../../assets/cv.png"
+import email from "../../assets/email.png"
+import linkedin from "../../assets/linkedin.png"
 import { Popover, PopoverContent, PopoverTrigger } from "@nextui-org/react";
 
 
@@ -67,7 +68,7 @@ function Header() {
             <div className="flex flex-row space-x-4">
             <Popover showArrow placement="bottom">
       <PopoverTrigger>
-      <img src={twitter} alt="twitter" />
+      <img src={twitter} alt="twitter" className="w-[30px] h-[30px] object-cover" />
       </PopoverTrigger>
       <PopoverContent className="p-1">
         <a href="https://twitter.com/DiazSukmawan" className="underline">twitter.com/DiazSukmawan </a>
@@ -75,7 +76,7 @@ function Header() {
     </Popover>
     <Popover showArrow placement="bottom">
       <PopoverTrigger>
-      <img src={instagram} alt="instagram" />
+      <img src={instagram} alt="instagram" className="w-[30px] h-[30px] object-cover" />
       </PopoverTrigger>
       <PopoverContent className="p-1">
         <a href="https://www.instagram.com/firman670676/" className="underline">instagram.com/firman670676 </a>
@@ -83,7 +84,7 @@ function Header() {
     </Popover>
     <Popover showArrow placement="bottom">
       <PopoverTrigger>
-      <img src={facebook} alt="facebook"/>
+      <img src={facebook} alt="facebook" className="w-[30px] h-[30px] object-cover"/>
       </PopoverTrigger>
       <PopoverContent className="p-1">
         <a href="https://www.facebook.com/03MY.Ella.4674/" className="underline">facebook.com/FirmanDiazSukmawan </a>
@@ -91,7 +92,7 @@ function Header() {
     </Popover>
     <Popover showArrow placement="bottom">
       <PopoverTrigger>
-      <img src={email} alt="email" />
+      <img src={email} alt="email" className="w-[30px] h-[30px] object-cover" />
       </PopoverTrigger>
       <PopoverContent className="p-1">
         <a href="mailto:firman670676@gmail.com" className="underline">firman670676@gmail.com </a>
@@ -99,11 +100,19 @@ function Header() {
     </Popover>
     <Popover showArrow placement="bottom">
       <PopoverTrigger>
-      <img src={cv} alt="cv" className="w-[30px] h-[30px] object-fill"/>
+      <img src={cv} alt="cv" className="w-[30px] h-[30px] object-cover"/>
       </PopoverTrigger>
       <PopoverContent className="p-1 flex flex-col items-start justify-start">
         <a href="https://docs.google.com/document/d/1ABrVxIc-Q4QCOAHUklFCPYUUwKnvlqOth8IEDb4psHo/edit?usp=sharing" className="underline">CV-Indonesia </a>
         <a href="https://docs.google.com/document/d/1RvXGLfdHMlCkmfZyMT4B2OB-2416EUP4dK_d_6ynDDY/edit?usp=sharing" className="underline pt-2">CV-ENG </a>
+      </PopoverContent>
+    </Popover>
+    <Popover showArrow placement="bottom">
+      <PopoverTrigger>
+      <img src={linkedin} alt="linkedin" className="w-[30px] h-[30px] object-cover"/>
+      </PopoverTrigger>
+      <PopoverContent className="p-1 flex flex-col items-start justify-start">
+        <a href="https://www.linkedin.com/in/firman-diaz/" className="underline">linkedin.com/in/firman-diaz</a>
       </PopoverContent>
     </Popover>
 
