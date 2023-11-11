@@ -28,7 +28,7 @@ function Header() {
       let index = 0;
   
       intervalRef.current = setInterval(() => {
-        // Normalize the character before adding it to the text
+        
         const normalizedChar = text[index].normalize('NFC');
         
         setTypedText((prevText) => prevText + normalizedChar);
@@ -46,10 +46,10 @@ function Header() {
       }, 100);
     }
   
-    typeText(); // Start typing when the component mounts
+    typeText(); 
   
     return () => {
-      // Clear the interval when the component unmounts
+     
       clearInterval(intervalRef.current);
     };
   }, [text]);
@@ -64,7 +64,7 @@ function Header() {
 
   return (
     <header className="w-[100%] lg:pr-[250px] md:pr-[200px] pr-[0px]" id="aboutMe">
-        <div className="textHeader font-sora lg:text-[56px] md:text-[40px] text-[22px] lg:text-start md:text-start text-center">
+        <div className="textHeader font-sora lg:text-[56px] md:text-[40px] text-[22px] lg:text-start md:text-start text-center lg:h-[180px] md:h-[250px] h-[160px]">
         Hi Im Firman, {typedText}
         </div>
 
