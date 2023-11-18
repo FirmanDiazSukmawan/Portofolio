@@ -144,8 +144,7 @@ function Header() {
       <img src={cv} alt="cv" className="w-[30px] h-[30px] object-cover"/>
       </PopoverTrigger>
       <PopoverContent className="p-1 flex flex-col items-start justify-start">
-        <a href="https://docs.google.com/document/d/1ABrVxIc-Q4QCOAHUklFCPYUUwKnvlqOth8IEDb4psHo/edit?usp=sharing" className="underline">CV-Indonesia </a>
-        <a href="https://docs.google.com/document/d/1RvXGLfdHMlCkmfZyMT4B2OB-2416EUP4dK_d_6ynDDY/edit?usp=sharing" className="underline pt-2">CV-ENG </a>
+        <a href="https://drive.google.com/drive/folders/1gLN4mi_C7s0GwU-Lh4z2QO3YujTM5qkz?usp=sharing" className="underline">My CV </a>
       </PopoverContent>
     </Popover>
     <Popover showArrow placement="bottom">
