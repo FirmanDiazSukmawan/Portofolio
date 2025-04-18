@@ -94,12 +94,12 @@ function Header() {
           )}
           </div>
 
-          <div className="flex flex-col lg:w-[499px] lg:ml-[36px] md:ml-[20px] ml-[5px] lg:space-y-0 md:space-y-0 space-y-2">
+          <div className="flex flex-col lg:w-[600px] lg:ml-[36px] md:ml-[20px] ml-[5px] lg:space-y-0 md:space-y-0 space-y-2">
             <div className="text-[#FBFBFB] lg-text-[28px] md:text-[25px] text-[20px] font-sora lg:h-[72px] flex flex-col lg:items-start md:items-start items-center justify-center">
               Biography
             </div>
             <div className="font-inter text-[#D6D6D6] lg:text-[18px] lg:text-start md:text-start text-center">
-            Firman is a high school graduate with some computer skills and a passion for the world of programming, with a focus on Fullstack Web & Mobile Development. I am a responsible individual when it comes to completing tasks. Exicited on <span className="text-[#87cefa]">React</span>, <span className="text-[#4CA9FF]">React Native</span>, <span className="text-[#80FFA3]">NodeJs</span> and <span className="text-[#3BF686]">Agile</span>.
+            Firman is a high school graduate with some computer skills and a passion for the world of programming, with a focus on Fullstack Web & Mobile Development. I am a responsible individual when it comes to completing tasks. Exicited on <span className="text-[#87cefa]">React</span>, <span className="text-[#d92186]">Next JS</span>, <span className="text-[#c978eb]">React Native</span>, <span className="text-[#80FFA3]">Node JS</span> and <span className="text-[#3BF686]">Agile</span>.
             </div>
           </div>
           <div className="flex flex-col lg:ml-[86px] lg:h-[168px] items-center">
