@@ -40,7 +40,7 @@ function Skills() {
             <img
               src={skillImage[index].image}
               alt="html"
-              className="w-full h-full object-fill brightness-100"
+              className="w-full h-full object-contain brightness-100"
             />
           </motion.div>
         ))}

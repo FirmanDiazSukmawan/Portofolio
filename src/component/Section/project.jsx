@@ -17,17 +17,24 @@ function ProjectContent() {
     Object?.keys(pageData)?.length / projectsPerPage
   );
 
-  const [showFullscreen,setShowFullscreen] = useState(false)
+  const [showFullscreen, setShowFullscreen] = useState({});
 
-  const handleImageClick = () => {
-    setShowFullscreen(true);
-  }
+const handleImageClick = (num) => {
+  setShowFullscreen((prev) => ({
+    ...prev,
+    [num]: true,
+  }));
+};
 
-  const handleImageCloseFullScreen = () => {
-    setShowFullscreen(false);
-  }
+const handleImageCloseFullScreen = (num) => {
+  setShowFullscreen((prev) => ({
+    ...prev,
+    [num]: false,
+  }));
+};
 
-  // console.log(totalPages);
+
+
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
@@ -78,15 +85,15 @@ function ProjectContent() {
               <img
                 src={item.image}
                 alt="porto"
-                className="w-[80%] h-[70%] object-fill"
-                onClick={handleImageClick}
+                className="w-[80%] h-[70%] object-cover"
+                onClick={()=>handleImageClick(index)}
               />
-              {showFullscreen && (
+             {showFullscreen[index] && (
                 <img
                 src={item.image}
                 alt="porto"
-                className="w-[100%] h-[100%] object-fill absolute"
-                onClick={handleImageCloseFullScreen}
+                className="w-[100%] h-[100%] object-cover absolute"
+                onClick={()=>handleImageCloseFullScreen(index)}
               />
               )}
             </div>

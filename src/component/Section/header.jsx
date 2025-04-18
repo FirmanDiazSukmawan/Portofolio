@@ -70,7 +70,7 @@ function Header() {
 
        
         <div className="flex lg:flex-row md:flex-col flex-col items-center lg:space-y-0 md:space-y-5 space-y-3 lg:pt-0 md:pt-3">
-          <div className="flex flex-col lg:items-start md:items-center items-center">
+          <div className="flex flex-col lg:items-start md:items-center items-center gap-2">
             
           <div className="lg:w-[124px] lg:h-[124px] sm:w-[120px] sm:h-[120px]
           w-[124px] h-[124px] bg-[#3A3636] rounded-[50%] border-2 bg-gradient-to-r from-[#62D9FF] to-[#3BF686] flex items-center justify-center">

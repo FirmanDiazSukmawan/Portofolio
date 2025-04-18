@@ -11,6 +11,13 @@ import react from "../../assets/skills/reactjs.png";
 import reduxToolkit from "../../assets/skills/reduxToolkit.png";
 import reactNative from "../../assets/skills/reactNative.png";
 import nextJS from "../../assets/skills/nextJs.png";
+import androidStudio from "../../assets/skills/androidStudio.png";
+import firebase from "../../assets/skills/firebaseLogo.png";
+import reactRedux from "../../assets/skills/reactRedux.png";
+import xCode from "../../assets/skills/xCode.png";
+import github from "../../assets/skills/github.png";
+import gitlab from "../../assets/skills/gitlab.png";
+import ciCd from "../../assets/skills/ciCD.png";
 
 const skillImage = {
   1: { image: html },
@@ -26,6 +33,13 @@ const skillImage = {
   11: { image: reduxToolkit },
   12: { image: reactNative },
   13: { image: nextJS },
+  14: { image: androidStudio },
+  15: { image: firebase },
+  16: { image: reactRedux },
+  17: { image: xCode },
+  18: { image: github },
+  19: { image: gitlab },
+  20: { image: ciCd },
 };
 
 export default skillImage;

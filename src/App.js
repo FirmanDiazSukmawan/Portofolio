@@ -8,6 +8,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import loadingCat from "./assets/loading/loading.json";
 import { useAnimation, motion } from "framer-motion";
 import { debounce, throttle } from "lodash";
+import Experience from "./component/Section/experience";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -55,23 +56,22 @@ export default function App() {
           transition: { duration: 1 },
         });
       }
-    }, 200); 
+    }, 200);
 
     window.addEventListener("scroll", throttledHandleScroll);
 
     return () => {
       window.removeEventListener("scroll", throttledHandleScroll);
-      throttledHandleScroll.cancel(); 
+      throttledHandleScroll.cancel();
     };
   }, [projectContentAnimation]);
 
   useEffect(() => {
-   
     window.scrollTo(0, 0);
   }, [loading]);
 
   return (
-    <>
+    <div className="w-full">
       {loading ? (
         <div className="flex w-screen h-screen justify-center items-center bg-[#272727]">
           <Player
@@ -84,7 +84,7 @@ export default function App() {
       ) : (
         <div className="w-full bg-[#272727]">
           <NavbarMenu />
-          <div className="w-[100%] lg:mt-[94px] md:mt-[60px] mt-[30px] flex flex-1 flex-col">
+          <div className="w-[100%] lg:mt-[94px] md:mt-[60px] mt-[30px] flex flex-1 flex-col pb-5">
             <div className="lg:pl-[150px] md:pl-[100px] pl-[5px]  lg:space-y-[63px] flex flex-col space-y-10">
               <motion.div
                 initial={{ opacity: 0, x: 100 }}
@@ -100,6 +100,12 @@ export default function App() {
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: -100 }}
+                animate={headerAnimation}
+              >
+                <Experience />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
                 animate={projectContentAnimation}
               >
                 <ProjectContent />
@@ -109,6 +115,6 @@ export default function App() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
