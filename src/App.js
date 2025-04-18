@@ -9,6 +9,7 @@ import loadingCat from "./assets/loading/loading.json";
 import { useAnimation, motion } from "framer-motion";
 import { debounce, throttle } from "lodash";
 import Experience from "./component/Section/experience";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -72,6 +73,7 @@ export default function App() {
 
   return (
     <div className="w-full">
+      <Analytics />
       {loading ? (
         <div className="flex w-screen h-screen justify-center items-center bg-[#272727]">
           <Player
