@@ -92,7 +92,7 @@ const handleImageCloseFullScreen = (num) => {
                 <img
                 src={item.image}
                 alt="porto"
-                className="w-[100%] h-[100%] object-contain absolute"
+                className="w-[100%] h-[100%] lg:object-contain md:object-fill object-fill absolute"
                 onClick={()=>handleImageCloseFullScreen(index)}
               />
               )}
