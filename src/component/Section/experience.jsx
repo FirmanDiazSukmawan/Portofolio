@@ -8,12 +8,12 @@ const Experience = () => {
           period: 'Dec 2023 - Feb 2025',
          
           descriptionPoints: [
-            'Develop Front End Web Hercaweb',
+            'Develop Front End Web HercaHris',
             'Develop the Herca HRIS Mobile app from scratch to completion using React Native.',
             'Add notification features using Firebase & push notifications.',
             'Add & improve several features on the Herca HRIS Website using Next JS.',
             'Publish app to the Google Play Store & App Store.',
-            'Develop the Hercaweb website as a key platform where customers can easily access product information, ask questions, and place orders efficiently.'
+            'Develop the Hercaweb/Herca.id website as a key platform where customers can easily access product information, ask questions, and place orders efficiently.'
           ],
         },
         {
