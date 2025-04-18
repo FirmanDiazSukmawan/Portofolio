@@ -85,14 +85,14 @@ const handleImageCloseFullScreen = (num) => {
               <img
                 src={item.image}
                 alt="porto"
-                className="w-[80%] h-[70%] object-cover"
+                className="w-[80%] h-[70%] object-contain"
                 onClick={()=>handleImageClick(index)}
               />
              {showFullscreen[index] && (
                 <img
                 src={item.image}
                 alt="porto"
-                className="w-[100%] h-[100%] object-cover absolute"
+                className="w-[100%] h-[100%] object-contain absolute"
                 onClick={()=>handleImageCloseFullScreen(index)}
               />
               )}
