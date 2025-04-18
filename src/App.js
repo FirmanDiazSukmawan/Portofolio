@@ -10,6 +10,7 @@ import { useAnimation, motion } from "framer-motion";
 import { debounce, throttle } from "lodash";
 import Experience from "./component/Section/experience";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -74,6 +75,7 @@ export default function App() {
   return (
     <div className="w-full">
       <Analytics />
+      <SpeedInsights />
       {loading ? (
         <div className="flex w-screen h-screen justify-center items-center bg-[#272727]">
           <Player
