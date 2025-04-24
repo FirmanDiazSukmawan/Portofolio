@@ -86,7 +86,7 @@ export default function App() {
           ></Player>
         </div>
       ) : (
-        <div className="w-full bg-[#272727]">
+        <div className="w-full bg-[#272727] scroll-smooth">
           <NavbarMenu />
           <div className="w-[100%] lg:mt-[94px] md:mt-[60px] mt-[30px] flex flex-1 flex-col pb-5">
             <div className="lg:pl-[150px] md:pl-[100px] pl-[5px]  lg:space-y-[63px] flex flex-col space-y-10">
