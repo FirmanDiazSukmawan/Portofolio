@@ -5,7 +5,7 @@ const Experience = () => {
         {
           role: 'Frontend Web & Mobile Developer',
           company: 'PT. Herca Cipta Dermal Perdana',
-          period: 'Dec 2023 - Feb 2025',
+          period: 'Nov 2023 - Feb 2025',
          
           descriptionPoints: [
             'Develop Front End Web HercaHris',
