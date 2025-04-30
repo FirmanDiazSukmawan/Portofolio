@@ -38,11 +38,11 @@ function NavbarMenu() {
   return (
     <Navbar>
       <NavbarBrand as="button">
-        <p className="font-bold text-inherit" onClick={scrollToTop}>Firman Diaz Sukmawan</p>
+        <p className="font-bold text-inherit transition-transform duration-300 hover:scale-105" onClick={scrollToTop}>Firman Diaz Sukmawan</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
           <NavbarItem as="button">
-          <Link to="aboutMe" smooth={true} duration={500} color="foreground">
+          <Link to="aboutMe" smooth={true} duration={500} color="foreground" className='transition-transform duration-300 hover:scale-105'>
            About Me
           </Link>
           </NavbarItem>
