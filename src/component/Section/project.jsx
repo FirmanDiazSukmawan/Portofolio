@@ -69,6 +69,11 @@ const handleImageCloseFullScreen = (num) => {
                       <a href={item.link} className="text-base">
                         Demo WEB/APK
                       </a>
+                      {item.linkWeb &&
+                      <a href={item.linkWeb} className="text-base">
+                       Link Website
+                      </a>
+                      }
                     </div>
                   </PopoverContent>
                 </Popover>
