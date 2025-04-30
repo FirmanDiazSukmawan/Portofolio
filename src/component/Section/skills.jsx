@@ -40,7 +40,7 @@ function Skills() {
             <img
               src={skillImage[index].image}
               alt="html"
-              className="w-full h-full object-contain brightness-100"
+              className="w-full h-full object-contain brightness-100 transition-transform duration-300 hover:scale-105 cursor-pointer"
             />
           </motion.div>
         ))}

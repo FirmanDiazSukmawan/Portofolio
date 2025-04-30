@@ -77,7 +77,7 @@ function Header() {
             <img
               src={myFoto}
               alt="img"
-              className="w-[120px]  h-[120px] rounded-[50%]  bg-[#3A3636] object-cover"
+              className="w-[120px]  h-[120px] rounded-[50%]  bg-[#3A3636] object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
               onClick={handleImageClick}
             />
           </div>
@@ -109,7 +109,7 @@ function Header() {
             <div className="flex flex-row space-x-4">
             <Popover showArrow placement="bottom">
       <PopoverTrigger>
-      <img src={twitter} alt="twitter" className="w-[30px] h-[30px] object-cover" />
+      <img src={twitter} alt="twitter" className="w-[30px] h-[30px] object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
       </PopoverTrigger>
       <PopoverContent className="p-1">
         <a href="https://twitter.com/DiazSukmawan" className="underline">DiazSukmawan </a>
@@ -117,7 +117,7 @@ function Header() {
     </Popover>
     <Popover showArrow placement="bottom">
       <PopoverTrigger>
-      <img src={instagram} alt="instagram" className="w-[30px] h-[30px] object-cover" />
+      <img src={instagram} alt="instagram" className="w-[30px] h-[30px] object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
       </PopoverTrigger>
       <PopoverContent className="p-1">
         <a href="https://www.instagram.com/firman670676/" className="underline">@firman670676 </a>
@@ -125,7 +125,7 @@ function Header() {
     </Popover>
     <Popover showArrow placement="bottom">
       <PopoverTrigger>
-      <img src={facebook} alt="facebook" className="w-[30px] h-[30px] object-cover"/>
+      <img src={facebook} alt="facebook" className="w-[30px] h-[30px] object-cover transition-transform duration-300 hover:scale-110 cursor-pointer"/>
       </PopoverTrigger>
       <PopoverContent className="p-1">
         <a href="https://www.facebook.com/03MY.Ella.4674/" className="underline">FirmanDiazSukmawan </a>
@@ -133,7 +133,7 @@ function Header() {
     </Popover>
     <Popover showArrow placement="bottom">
       <PopoverTrigger>
-      <img src={email} alt="email" className="w-[30px] h-[30px] object-cover" />
+      <img src={email} alt="email" className="w-[30px] h-[30px] object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
       </PopoverTrigger>
       <PopoverContent className="p-1">
         <a href="mailto:firman670676@gmail.com" className="underline">firman670676@gmail.com </a>
@@ -141,7 +141,7 @@ function Header() {
     </Popover>
     <Popover showArrow placement="bottom">
       <PopoverTrigger>
-      <img src={cv} alt="cv" className="w-[30px] h-[30px] object-cover"/>
+      <img src={cv} alt="cv" className="w-[30px] h-[30px] object-cover transition-transform duration-300 hover:scale-110 cursor-pointer"/>
       </PopoverTrigger>
       <PopoverContent className="p-1 flex flex-col items-start justify-start">
         <a href="https://drive.google.com/drive/folders/1gLN4mi_C7s0GwU-Lh4z2QO3YujTM5qkz?usp=sharing" className="underline">My CV </a>
@@ -149,7 +149,7 @@ function Header() {
     </Popover>
     <Popover showArrow placement="bottom">
       <PopoverTrigger>
-      <img src={linkedin} alt="linkedin" className="w-[30px] h-[30px] object-cover"/>
+      <img src={linkedin} alt="linkedin" className="w-[30px] h-[30px] object-cover transition-transform duration-300 hover:scale-110 cursor-pointer"/>
       </PopoverTrigger>
       <PopoverContent className="p-1 flex flex-col items-start justify-start">
         <a href="https://www.linkedin.com/in/firman-diaz/" className="underline">Firman D.S</a>

@@ -55,7 +55,7 @@ const handleImageCloseFullScreen = (num) => {
             className="flex lg:flex-row md:flex-row flex-col sm:items-center space-y-2 w-full"
             key={index}
           >
-            <div className="lg:w-[556px] lg:h-[282px] md:w-[556px] md:h-[227px] w-[100%] h-[300px]  relative flex flex-col justify-end items-center bg-[#323443] space-y-3 rounded-md">
+            <div className="lg:w-[556px] lg:h-[282px] md:w-[556px] md:h-[227px] w-[100%] h-[300px]  relative flex flex-col justify-center items-center bg-[#323443] space-y-3 rounded-md">
               <button className="w-9 h-9 bg-[#3F4152] absolute right-0 top-0 rounded-lg flex items-center justify-center">
                 <Popover placement="left" showArrow={true}>
                   <PopoverTrigger>
@@ -83,19 +83,24 @@ const handleImageCloseFullScreen = (num) => {
                 </div>
               </div>
               <img
+              src={item.image}
+              alt="porto"
+              className="w-[80%] h-[70%] object-contain transition-transform duration-300 hover:scale-105 cursor-pointer"
+              onClick={() => handleImageClick(index)}
+              />
+
+        {showFullscreen[index] && (
+            <div
+              className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-[9999]"
+              onClick={() => handleImageCloseFullScreen(index)}
+            >
+              <img
                 src={item.image}
                 alt="porto"
-                className="w-[80%] h-[70%] object-contain"
-                onClick={()=>handleImageClick(index)}
+                className="max-w-[90%] max-h-[90%] object-contain"
               />
-             {showFullscreen[index] && (
-                <img
-                src={item.image}
-                alt="porto"
-                className="w-[100%] h-[100%] lg:object-contain md:object-fill object-fill absolute"
-                onClick={()=>handleImageCloseFullScreen(index)}
-              />
-              )}
+            </div>
+          )}
             </div>
             <div className="flex-col flex justify-center ml-7 lg:space-y-6 md:space-y-6 space-y-3 lg:items-start md:items-start items-center">
               <div className="textInterBold text-[#DEDEDE] text-lg">

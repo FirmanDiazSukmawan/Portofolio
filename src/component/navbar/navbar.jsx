@@ -62,24 +62,30 @@ function NavbarMenu() {
       <NavbarContent justify="end">
         <NavbarItem className="flex">
         <Popover showArrow placement="bottom">
-      <PopoverTrigger>
-        {isSmallScreen?<User   
-          as="button"
-          className="transition-transform"
-          avatarProps={{
-            src: myFoto
-          }}
-        />:<User   
-        as="button"
-        name="Firman"
-        description="Fullstack Developer"
-        className="transition-transform"
-        avatarProps={{
-          src: myFoto
-        }}
-      /> }
-        
-      </PopoverTrigger>
+        <PopoverTrigger>
+  {isSmallScreen ? (
+    <User
+      as="button"
+      className="transition-transform group"
+      avatarProps={{
+        src: myFoto,
+        className: "transition-transform duration-300 group-hover:scale-105"
+      }}
+    />
+  ) : (
+    <User
+      as="button"
+      name="Firman"
+      description="Fullstack Developer"
+      className="transition-transform group"
+      avatarProps={{
+        src: myFoto,
+        className: "transition-transform duration-300 group-hover:scale-105"
+      }}
+    />
+  )}
+</PopoverTrigger>
+
       <PopoverContent className="p-1">
         <UserCard image={myFoto} />
       </PopoverContent>

@@ -57,15 +57,21 @@ export const UserCard = (props) => {
       <CardFooter className="gap-2">
         <div>Contact me?</div>
         <div className="flex gap-1">
-          <a href="https://wa.me/6288801862062" className="flex gap-1">
+          <a
+            href="https://wa.me/6288801862062"
+            className="flex gap-1 transition-transform duration-300 hover:scale-105 cursor-pointer"
+          >
             <p className=" text-default-500 text-small">Whatsapp:</p>
             <i className="bi bi-whatsapp font-bold text-default-600 text-small"></i>
           </a>
         </div>
         <div className="flex gap-1">
-          <a href="mailto:firman670676@gmail.com" className="flex gap-1">
+          <a
+            href="mailto:firman670676@gmail.com"
+            className="flex gap-1 transition-transform duration-300 hover:scale-105 cursor-pointer"
+          >
             <p className="text-default-500 text-small">Email:</p>
-            <i className="bi bi-envelope-at font-semibold text-default-600 text-small"></i>
+            <i className="bi bi-envelope-at font-semibold text-default-600 text-small "></i>
           </a>
         </div>
       </CardFooter>
