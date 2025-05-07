@@ -19,22 +19,22 @@ function ProjectContent() {
 
   const [showFullscreen, setShowFullscreen] = useState({});
 
-const handleImageClick = (num) => {
-  setShowFullscreen((prev) => ({
-    ...prev,
-    [num]: true,
-  }));
-};
+  const handleImageClick = (num) => {
+    setShowFullscreen((prev) => ({
+      ...prev,
+      [num]: true,
+    }));
+    document.body.style.overflow = "hidden";
+  };
 
-const handleImageCloseFullScreen = (num) => {
-  setShowFullscreen((prev) => ({
-    ...prev,
-    [num]: false,
-  }));
-};
+  const handleImageCloseFullScreen = (num) => {
+    setShowFullscreen((prev) => ({
+      ...prev,
+      [num]: false,
+    }));
 
-
-
+    document.body.style.overflow = "auto";
+  };
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
@@ -69,11 +69,11 @@ const handleImageCloseFullScreen = (num) => {
                       <a href={item.link} className="text-base">
                         Demo WEB/APK
                       </a>
-                      {item.linkWeb &&
-                      <a href={item.linkWeb} className="text-base">
-                       Link Website
-                      </a>
-                      }
+                      {item.linkWeb && (
+                        <a href={item.linkWeb} className="text-base">
+                          Link Website
+                        </a>
+                      )}
                     </div>
                   </PopoverContent>
                 </Popover>
@@ -88,24 +88,24 @@ const handleImageCloseFullScreen = (num) => {
                 </div>
               </div>
               <img
-              src={item.image}
-              alt="porto"
-              className="w-[80%] h-[70%] object-contain transition-transform duration-300 hover:scale-105 cursor-pointer"
-              onClick={() => handleImageClick(index)}
-              />
-
-        {showFullscreen[index] && (
-            <div
-              className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-[9999]"
-              onClick={() => handleImageCloseFullScreen(index)}
-            >
-              <img
                 src={item.image}
                 alt="porto"
-                className="max-w-[90%] max-h-[90%] object-contain"
+                className="w-[80%] h-[70%] object-contain transition-transform duration-300 hover:scale-105 cursor-pointer"
+                onClick={() => handleImageClick(index)}
               />
-            </div>
-          )}
+
+              {showFullscreen[index] && (
+                <div
+                  className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-[9999]"
+                  onClick={() => handleImageCloseFullScreen(index)}
+                >
+                  <img
+                    src={item.image}
+                    alt="porto"
+                    className="max-w-[90%] max-h-[90%] object-contain"
+                  />
+                </div>
+              )}
             </div>
             <div className="flex-col flex justify-center ml-7 lg:space-y-6 md:space-y-6 space-y-3 lg:items-start md:items-start items-center">
               <div className="textInterBold text-[#DEDEDE] text-lg">
