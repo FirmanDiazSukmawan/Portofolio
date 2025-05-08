@@ -1,53 +1,57 @@
 {
-  "name": "my-porto",
-  "version": "0.1.0",
-  "private": true,
-  "type": "module",
-  "dependencies": {
-    "@lottiefiles/react-lottie-player": "^3.5.3",
-    "@nextui-org/react": "^2.2.5",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@vercel/analytics": "^1.5.0",
-    "@vercel/speed-insights": "^1.2.0",
-    "bootstrap-icons": "^1.11.1",
-    "framer-motion": "^10.16.4",
-    "lodash": "^4.17.21",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-responsive-carousel": "^3.2.23",
-    "react-router-dom": "^6.18.0",
-    "react-scroll": "^1.9.0",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.4.1",
-    "autoprefixer": "^10.4.21",
-    "tailwindcss": "^3.3.5",
-    "vite": "^6.3.5"
-  }
+   "name": "my-porto",
+   "version": "0.1.0",
+   "private": true,
+   "type": "module",
+   "dependencies": {
+      "@heroui/navbar": "^2.2.17",
+      "@heroui/popover": "^2.3.19",
+      "@heroui/react": "2.7.8",
+      "@heroui/system": "^2.4.15",
+      "@heroui/theme": "^2.4.15",
+      "@lottiefiles/react-lottie-player": "^3.5.3",
+      "@testing-library/jest-dom": "^5.17.0",
+      "@testing-library/react": "^13.4.0",
+      "@testing-library/user-event": "^13.5.0",
+      "@vercel/analytics": "^1.5.0",
+      "@vercel/speed-insights": "^1.2.0",
+      "bootstrap-icons": "^1.11.1",
+      "framer-motion": "^12.10.1",
+      "lodash": "^4.17.21",
+      "react": "^19.1.0",
+      "react-dom": "^19.1.0",
+      "react-responsive-carousel": "^3.2.23",
+      "react-router-dom": "^6.18.0",
+      "react-scroll": "^1.9.0",
+      "web-vitals": "^2.1.4"
+   },
+   "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "preview": "vite preview"
+   },
+   "eslintConfig": {
+      "extends": [
+         "react-app",
+         "react-app/jest"
+      ]
+   },
+   "browserslist": {
+      "production": [
+         ">0.2%",
+         "not dead",
+         "not op_mini all"
+      ],
+      "development": [
+         "last 1 chrome version",
+         "last 1 firefox version",
+         "last 1 safari version"
+      ]
+   },
+   "devDependencies": {
+      "@vitejs/plugin-react": "^4.4.1",
+      "autoprefixer": "^10.4.21",
+      "tailwindcss": "^3.3.5",
+      "vite": "^6.3.5"
+   }
 }

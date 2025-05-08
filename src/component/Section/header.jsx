@@ -6,7 +6,7 @@ import myFoto from "../../assets/myFoto.jpg";
 import cv from "../../assets/cv.png";
 import email from "../../assets/email.png";
 import linkedin from "../../assets/linkedin.png";
-import { Popover, PopoverContent, PopoverTrigger } from "@nextui-org/react";
+import { Popover, PopoverContent, PopoverTrigger } from "@heroui/react";
 import { useEffect } from "react";
 import { useRef } from "react";
 

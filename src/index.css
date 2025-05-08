@@ -8,6 +8,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.some-class::before {
+  content: "";
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

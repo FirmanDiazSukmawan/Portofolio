@@ -5,7 +5,7 @@ import {
   CardBody,
   CardFooter,
   CardHeader,
-} from "@nextui-org/react";
+} from "@heroui/react";
 
 export const UserCard = (props) => {
   //   const [isFollowed, setIsFollowed] = React.useState(false);
